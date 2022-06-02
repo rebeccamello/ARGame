@@ -14,8 +14,8 @@ struct MenuView: View {
         NavigationView {
             ZStack {
                 Color("BackgroundColor").ignoresSafeArea(.all)
-                CustomButtons(text: "Começar", backgroundColor: Color("ActionColor"), foregroundColor: Color("BackgroundColor"), action: {
-                    print("vai pro jogo")
+                CustomButtons(text: "Começar", backgroundColor: Color("BlueColor"), foregroundColor: Color("BackgroundColor"), action: {
+                    ContentView()
                 })
             }
             .preferredColorScheme(.dark)

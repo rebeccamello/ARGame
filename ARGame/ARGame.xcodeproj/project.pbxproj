@@ -68,7 +68,6 @@
 				9D6CC6122849256B00BE4FD0 /* Classes */,
 				9D6CC60D2849237F00BE4FD0 /* Views */,
 				9D6CC5F928480B3F00BE4FD0 /* AppDelegate.swift */,
-				9D6CC5FB28480B3F00BE4FD0 /* ContentView.swift */,
 				9D6CC5FD28480B3F00BE4FD0 /* Experience.rcproject */,
 				9D6CC5FF28480B4100BE4FD0 /* Assets.xcassets */,
 				9D6CC60128480B4100BE4FD0 /* Preview Content */,
@@ -90,6 +89,7 @@
 				9D6CC60B2849233200BE4FD0 /* MenuView.swift */,
 				9D6CC60E2849238B00BE4FD0 /* OnBoardingView.swift */,
 				9D6CC6192849343300BE4FD0 /* GameOverView.swift */,
+				9D6CC5FB28480B3F00BE4FD0 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

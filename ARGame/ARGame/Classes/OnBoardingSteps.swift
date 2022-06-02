@@ -16,7 +16,7 @@ struct onBoardingSteps: View {
         HStack {
             Text(String(numerOfStep))
                 .font(.system(size: 50, design: .rounded))
-                .foregroundColor(Color("TitleColor"))
+                .foregroundColor(Color("BlueColor"))
                 .bold()
                 .padding(.trailing)
             VStack(alignment: .leading) {

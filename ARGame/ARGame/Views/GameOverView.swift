@@ -18,7 +18,7 @@ struct GameOverView: View {
             Color("BackgroundColor").ignoresSafeArea()
             VStack {
                 Text(titleText)
-                    .foregroundColor(Color("TitleColor"))
+                    .foregroundColor(Color("BlueColor"))
                     .font(.system(size: 54))
                     .bold()
                     .padding()
@@ -40,7 +40,7 @@ struct GameOverView: View {
                     .scaledToFit()
                     .padding()
                 
-                CustomButtons(text: "Jogar novamente", backgroundColor: Color("ActionColor"), foregroundColor: Color("BackgroundColor"), action: {
+                CustomButtons(text: "Jogar novamente", backgroundColor: Color("BlueColor"), foregroundColor: Color("BackgroundColor"), action: {
                     print("vai de novo")
                 })
                 
@@ -49,10 +49,10 @@ struct GameOverView: View {
                 }
                 .frame(width: 200, height: 44)
                 .background(Color("BackgroundColor"))
-                .foregroundColor(Color("ActionColor"))
+                .foregroundColor(Color("BlueColor"))
                 .cornerRadius(10)
                 .padding()
-                .shadow(color: Color("ActionColor"), radius: 8)
+                .shadow(color: Color("BlueColor"), radius: 8)
             }
                 
         }
