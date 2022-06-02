@@ -9,20 +9,26 @@ import SwiftUI
 
 struct MenuView: View {
     @AppStorage("shouldShowOnBoarding") var shouldShowOnBoarding: Bool = true
+    @State private var showingGame = false
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color("BackgroundColor").ignoresSafeArea(.all)
-                CustomButtons(text: "Começar", backgroundColor: Color("BlueColor"), foregroundColor: Color("BackgroundColor"), action: {
-                    ContentView()
-                })
+        if !showingGame {
+            NavigationView {
+                ZStack {
+                    Color("BackgroundColor").ignoresSafeArea(.all)
+                    CustomButtons(text: "Começar", backgroundColor: Color("BlueColor"), foregroundColor: Color("BackgroundColor"), action: {
+                        showingGame = true
+                    })
+                }
+                .preferredColorScheme(.dark)
             }
-            .preferredColorScheme(.dark)
+            .fullScreenCover(isPresented: $shouldShowOnBoarding, content: {
+                OnBoardingView(shouldShowOnBoarding: $shouldShowOnBoarding)
+            })
+        } else {
+            Player1GameView()
         }
-        .fullScreenCover(isPresented: $shouldShowOnBoarding, content: {
-            OnBoardingView(shouldShowOnBoarding: $shouldShowOnBoarding)
-        })
+        
     }
     
 }
