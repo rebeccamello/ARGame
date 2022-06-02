@@ -21,6 +21,7 @@ struct OnBoardingStruct: View {
                         .font(.system(size: 42, design: .rounded))
                         .foregroundColor(Color("TitleColor"))
                         .padding()
+//                        .font(.custom(<#T##name: String##String#>, size: <#T##CGFloat#>))
                     
                     Text("Player 1")
                         .font(.system(size: 40, design: .rounded))

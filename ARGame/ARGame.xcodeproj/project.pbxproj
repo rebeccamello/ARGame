@@ -17,6 +17,7 @@
 		9D6CC6142849257B00BE4FD0 /* OnBoardingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC6132849257B00BE4FD0 /* OnBoardingStruct.swift */; };
 		9D6CC6162849275E00BE4FD0 /* OnBoardingSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC6152849275E00BE4FD0 /* OnBoardingSteps.swift */; };
 		9D6CC61828492E2E00BE4FD0 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC61728492E2E00BE4FD0 /* CustomButtons.swift */; };
+		9D6CC61A2849343300BE4FD0 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC6192849343300BE4FD0 /* GameOverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9D6CC6132849257B00BE4FD0 /* OnBoardingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingStruct.swift; sourceTree = "<group>"; };
 		9D6CC6152849275E00BE4FD0 /* OnBoardingSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSteps.swift; sourceTree = "<group>"; };
 		9D6CC61728492E2E00BE4FD0 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
+		9D6CC6192849343300BE4FD0 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				9D6CC60B2849233200BE4FD0 /* MenuView.swift */,
 				9D6CC60E2849238B00BE4FD0 /* OnBoardingView.swift */,
+				9D6CC6192849343300BE4FD0 /* GameOverView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				9D6CC5FA28480B3F00BE4FD0 /* AppDelegate.swift in Sources */,
 				9D6CC60F2849238B00BE4FD0 /* OnBoardingView.swift in Sources */,
 				9D6CC5FE28480B3F00BE4FD0 /* Experience.rcproject in Sources */,
+				9D6CC61A2849343300BE4FD0 /* GameOverView.swift in Sources */,
 				9D6CC6142849257B00BE4FD0 /* OnBoardingStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
