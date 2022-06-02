@@ -15,22 +15,24 @@ struct GameOverView: View {
     
     var body: some View {
         ZStack {
-            Color("BackgroundColor").ignoresSafeArea()
+            Color("BackgroundColor")
+                .ignoresSafeArea()
+            
             VStack {
                 Text(titleText)
-                    .foregroundColor(Color("BlueColor"))
+                    .foregroundColor(Color("ForegroundColor"))
                     .font(.system(size: 54))
                     .bold()
                     .padding()
                 
                 Text(text)
-                    .foregroundColor(Color("TextColor"))
+                    .foregroundColor(Color("ForegroundColor"))
                     .font(.headline)
                     .multilineTextAlignment(.center)
                     .padding()
                 
                 Text(time)
-                    .foregroundColor(Color("TextColor"))
+                    .foregroundColor(Color("ForegroundColor"))
                     .font(.title3)
                     .padding()
                 
@@ -40,7 +42,7 @@ struct GameOverView: View {
                     .scaledToFit()
                     .padding()
                 
-                CustomButtons(text: "Jogar novamente", backgroundColor: Color("BlueColor"), foregroundColor: Color("BackgroundColor"), action: {
+                CustomButtons(text: "Jogar novamente", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor"), action: {
                     print("vai de novo")
                 })
                 
@@ -49,19 +51,20 @@ struct GameOverView: View {
                 }
                 .frame(width: 200, height: 44)
                 .background(Color("BackgroundColor"))
-                .foregroundColor(Color("BlueColor"))
+                .foregroundColor(Color("AccentColor"))
                 .cornerRadius(10)
                 .padding()
-                .shadow(color: Color("BlueColor"), radius: 8)
+                .shadow(color: Color("AccentColor"), radius: 8)
             }
-                
         }
         .preferredColorScheme(.dark)
     }
 }
 
+#if DEBUG
 struct GameOverView_Previews: PreviewProvider {
     static var previews: some View {
         GameOverView(titleText: "Parabens!", text: "Você conseguiu desarmar a bomba antes do tempo!", time: "05:00", imageName: "bomba1")
     }
 }
+#endif
