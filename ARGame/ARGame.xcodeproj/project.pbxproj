@@ -12,6 +12,11 @@
 		9D6CC5FE28480B3F00BE4FD0 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC5FD28480B3F00BE4FD0 /* Experience.rcproject */; };
 		9D6CC60028480B4100BE4FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D6CC5FF28480B4100BE4FD0 /* Assets.xcassets */; };
 		9D6CC60328480B4100BE4FD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D6CC60228480B4100BE4FD0 /* Preview Assets.xcassets */; };
+		9D6CC60C2849233200BE4FD0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC60B2849233200BE4FD0 /* MenuView.swift */; };
+		9D6CC60F2849238B00BE4FD0 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC60E2849238B00BE4FD0 /* OnBoardingView.swift */; };
+		9D6CC6142849257B00BE4FD0 /* OnBoardingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC6132849257B00BE4FD0 /* OnBoardingStruct.swift */; };
+		9D6CC6162849275E00BE4FD0 /* OnBoardingSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC6152849275E00BE4FD0 /* OnBoardingSteps.swift */; };
+		9D6CC61828492E2E00BE4FD0 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC61728492E2E00BE4FD0 /* CustomButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		9D6CC5FD28480B3F00BE4FD0 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		9D6CC5FF28480B4100BE4FD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D6CC60228480B4100BE4FD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9D6CC60B2849233200BE4FD0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		9D6CC60E2849238B00BE4FD0 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		9D6CC6132849257B00BE4FD0 /* OnBoardingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingStruct.swift; sourceTree = "<group>"; };
+		9D6CC6152849275E00BE4FD0 /* OnBoardingSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSteps.swift; sourceTree = "<group>"; };
+		9D6CC61728492E2E00BE4FD0 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,8 @@
 		9D6CC5F828480B3F00BE4FD0 /* ARGame */ = {
 			isa = PBXGroup;
 			children = (
+				9D6CC6122849256B00BE4FD0 /* Classes */,
+				9D6CC60D2849237F00BE4FD0 /* Views */,
 				9D6CC5F928480B3F00BE4FD0 /* AppDelegate.swift */,
 				9D6CC5FB28480B3F00BE4FD0 /* ContentView.swift */,
 				9D6CC5FD28480B3F00BE4FD0 /* Experience.rcproject */,
@@ -68,6 +80,25 @@
 				9D6CC60228480B4100BE4FD0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9D6CC60D2849237F00BE4FD0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D6CC60B2849233200BE4FD0 /* MenuView.swift */,
+				9D6CC60E2849238B00BE4FD0 /* OnBoardingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9D6CC6122849256B00BE4FD0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9D6CC6132849257B00BE4FD0 /* OnBoardingStruct.swift */,
+				9D6CC6152849275E00BE4FD0 /* OnBoardingSteps.swift */,
+				9D6CC61728492E2E00BE4FD0 /* CustomButtons.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +171,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D6CC61828492E2E00BE4FD0 /* CustomButtons.swift in Sources */,
 				9D6CC5FC28480B3F00BE4FD0 /* ContentView.swift in Sources */,
+				9D6CC60C2849233200BE4FD0 /* MenuView.swift in Sources */,
+				9D6CC6162849275E00BE4FD0 /* OnBoardingSteps.swift in Sources */,
 				9D6CC5FA28480B3F00BE4FD0 /* AppDelegate.swift in Sources */,
+				9D6CC60F2849238B00BE4FD0 /* OnBoardingView.swift in Sources */,
 				9D6CC5FE28480B3F00BE4FD0 /* Experience.rcproject in Sources */,
+				9D6CC6142849257B00BE4FD0 /* OnBoardingStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
