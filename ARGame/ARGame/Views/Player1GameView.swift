@@ -8,7 +8,7 @@
 import SwiftUI
 import RealityKit
 
-struct ContentView : View {
+struct Player1GameView : View {
     var body: some View {
         return ARViewContainer().edgesIgnoringSafeArea(.all)
     }
@@ -31,13 +31,12 @@ struct ARViewContainer: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {}
-    
 }
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Player1GameView()
     }
 }
 #endif

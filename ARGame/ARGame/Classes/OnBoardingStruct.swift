@@ -19,13 +19,13 @@ struct OnBoardingStruct: View {
                 VStack (alignment: .center) {
                     Text("NOME DO JOGO")
                         .font(.system(size: 42, design: .rounded))
-                        .foregroundColor(Color("TitleColor"))
+                        .foregroundColor(Color("BlueColor"))
                         .padding()
 //                        .font(.custom(<#T##name: String##String#>, size: <#T##CGFloat#>))
                     
                     Text("Player 1")
                         .font(.system(size: 40, design: .rounded))
-                        .foregroundColor(Color("TitleColor"))
+                        .foregroundColor(Color("BlueColor"))
                 }
                 VStack (alignment: .leading) {
                     onBoardingSteps(numerOfStep: 1, title: "Escolha um objeto", description: "Escolha um objeto no ambiente em que você está")
@@ -39,14 +39,14 @@ struct OnBoardingStruct: View {
             VStack (alignment: .center) {
                 Text("Player 2")
                     .font(.system(size: 40, design: .rounded))
-                    .foregroundColor(Color("TitleColor"))
+                    .foregroundColor(Color("BlueColor"))
                 
                 
                 onBoardingSteps(numerOfStep: 1, title: "Encontre o objeto", description: "Ande pelo ambiente que está inserido o objeto e o encontre")
                 
                 onBoardingSteps(numerOfStep: 2, title: "Desative a bomba", description: "Faça TAL CoISA para desativar a bomba antes que o tempo acabe e ela exploda")
                 
-                CustomButtons(text: "Continuar", backgroundColor: Color("ActionColor"), foregroundColor: Color("BackgroundColor"), action: {
+                CustomButtons(text: "Continuar", backgroundColor: Color("BlueColor"), foregroundColor: Color("BackgroundColor"), action: {
                     shouldShowOnBoarding.toggle()
                 })
             }
