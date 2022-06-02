@@ -10,7 +10,11 @@ import RealityKit
 
 struct Player1GameView : View {
     var body: some View {
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        VStack {
+            ARViewContainer().edgesIgnoringSafeArea(.all)
+            
+            CameraButton()
+        }
     }
 }
 

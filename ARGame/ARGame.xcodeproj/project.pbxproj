@@ -18,6 +18,7 @@
 		9D6CC6162849275E00BE4FD0 /* OnBoardingSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC6152849275E00BE4FD0 /* OnBoardingSteps.swift */; };
 		9D6CC61828492E2E00BE4FD0 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC61728492E2E00BE4FD0 /* CustomButtons.swift */; };
 		9D6CC61A2849343300BE4FD0 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC6192849343300BE4FD0 /* GameOverView.swift */; };
+		9DD722C728495BE100674090 /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722C628495BE100674090 /* CameraButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		9D6CC6152849275E00BE4FD0 /* OnBoardingSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSteps.swift; sourceTree = "<group>"; };
 		9D6CC61728492E2E00BE4FD0 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		9D6CC6192849343300BE4FD0 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		9DD722C628495BE100674090 /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				9D6CC6132849257B00BE4FD0 /* OnBoardingStruct.swift */,
 				9D6CC6152849275E00BE4FD0 /* OnBoardingSteps.swift */,
 				9D6CC61728492E2E00BE4FD0 /* CustomButtons.swift */,
+				9DD722C628495BE100674090 /* CameraButton.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				9D6CC61828492E2E00BE4FD0 /* CustomButtons.swift in Sources */,
 				9D6CC5FC28480B3F00BE4FD0 /* Player1GameView.swift in Sources */,
+				9DD722C728495BE100674090 /* CameraButton.swift in Sources */,
 				9D6CC60C2849233200BE4FD0 /* MenuView.swift in Sources */,
 				9D6CC6162849275E00BE4FD0 /* OnBoardingSteps.swift in Sources */,
 				9D6CC5FA28480B3F00BE4FD0 /* AppDelegate.swift in Sources */,
