@@ -21,5 +21,6 @@ struct OnBoardingView: View {
             }
             .tabViewStyle(PageTabViewStyle() )
         }
+        .preferredColorScheme(.dark)
     }
 }

@@ -18,6 +18,7 @@ struct MenuView: View {
                     print("vai pro jogo")
                 })
             }
+            .preferredColorScheme(.dark)
         }
         .fullScreenCover(isPresented: $shouldShowOnBoarding, content: {
             OnBoardingView(shouldShowOnBoarding: $shouldShowOnBoarding)

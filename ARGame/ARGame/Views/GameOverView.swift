@@ -56,6 +56,7 @@ struct GameOverView: View {
             }
                 
         }
+        .preferredColorScheme(.dark)
     }
 }
 
