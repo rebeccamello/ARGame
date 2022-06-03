@@ -12,8 +12,6 @@ struct Player2GameView : View {
     var body: some View {
         VStack {
             ARViewContainer().edgesIgnoringSafeArea(.all)
-            
-            CameraButton()
         }
     }
 }

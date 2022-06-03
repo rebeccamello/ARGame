@@ -30,7 +30,7 @@ struct TimerView: View {
                         .padding()
                     
                     Picker("", selection: $selectedMinute){
-                        ForEach(0 ..< availableMinutes.count, id: \.self) { i in
+                        ForEach(1 ..< availableMinutes.count, id: \.self) { i in
                             Text("\(i) min").tag(i)
                         }
                     }
