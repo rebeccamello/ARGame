@@ -15,9 +15,12 @@ struct ARVariables{
 struct Player1GameView : View {
     var body: some View {
         ZStack {
-            Color("BackgroundColor").ignoresSafeArea(.all)
+            Color("BackgroundColor")
+                .ignoresSafeArea(.all)
             VStack {
-                ARViewContainer().edgesIgnoringSafeArea(.all)
+                ARViewContainer()
+                    .edgesIgnoringSafeArea(.all)
+                
                 CustomButtons(text: "Tirar foto", backgroundColor: Color("BlueColor"), foregroundColor: Color("ForegroundColor"), action: {
                     ARVariables.arView.snapshot(saveToHDR: false) { (image) in
                         // Compress the image
