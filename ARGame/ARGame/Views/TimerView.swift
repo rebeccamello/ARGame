@@ -35,9 +35,25 @@ struct TimerView: View {
                 .frame(width: 10)
                 .pickerStyle(.inline)
                 
-                CustomButtons(text: "Começar", backgroundColor: Color("BlueColor"), foregroundColor: Color("BackgroundColor"), action: {
-                    print("vai")
-                })
+                HStack {
+                    Button("Voltar") {
+                        print("voltar")
+                    }
+                    .frame(width: 150, height: 44)
+                    .background(Color("GrayColor"))
+                    .foregroundColor(Color("BackgroundColor"))
+                    .cornerRadius(10)
+                    .padding()
+                    
+                    Button("Começar") {
+                        print("vai")
+                    }
+                    .frame(width: 150, height: 44)
+                    .background(Color("BlueColor"))
+                    .foregroundColor(Color("BackgroundColor"))
+                    .cornerRadius(10)
+                    .padding()
+                }
                 .padding()
             }
         }
