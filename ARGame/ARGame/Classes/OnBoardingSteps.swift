@@ -7,27 +7,40 @@
 
 import SwiftUI
 
-struct onBoardingSteps: View {
-    var numerOfStep: Int
+struct OnBoardingSteps: View {
+    var stepNumber: Int
     var title: String
     var description: String
     
     var body: some View {
         HStack {
-            Text(String(numerOfStep))
-                .font(.system(size: 50, design: .rounded))
-                .foregroundColor(Color("BlueColor"))
+            Text(String(stepNumber))
+                .font(.system(size: 50, design: .default))
                 .bold()
+                .foregroundColor(Color("AccentColor"))
                 .padding(.trailing)
+            
             VStack(alignment: .leading) {
                 Text(title)
-                    .font(.system(size: 18, design: .rounded))
-                    .foregroundColor(Color("TextColor"))
-                .bold()
+                    .font(.system(size: 18, design: .default))
+                    .bold()
+                    .foregroundColor(Color("ForegroundColor"))
+                
                 Text(description)
-                    .font(.system(size: 18, design: .rounded))
-                    .foregroundColor(Color("TextColor"))
+                    .font(.system(size: 18, design: .default))
+                    .foregroundColor(Color("ForegroundColor"))
             }
-        }.padding()
+        }
+        .padding()
     }
 }
+
+#if DEBUG
+struct OnBoardingSteps_Previews: PreviewProvider {
+    static var previews: some View {
+        OnBoardingSteps(stepNumber: 1, title: "Título", description: "Descrição aqui.")
+            .background(Color("BackgroundColor"))
+            .previewLayout(.sizeThatFits)
+    }
+}
+#endif

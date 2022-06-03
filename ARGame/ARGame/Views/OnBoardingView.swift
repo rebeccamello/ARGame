@@ -24,3 +24,11 @@ struct OnBoardingView: View {
         .preferredColorScheme(.dark)
     }
 }
+
+#if DEBUG
+struct OnBoardingView_Previews: PreviewProvider {
+    static var previews: some View {
+        OnBoardingView(shouldShowOnBoarding: .constant(true))
+    }
+}
+#endif

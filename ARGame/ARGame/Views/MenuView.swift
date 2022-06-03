@@ -16,7 +16,7 @@ struct MenuView: View {
             NavigationView {
                 ZStack {
                     Color("BackgroundColor").ignoresSafeArea(.all)
-                    CustomButtons(text: "Começar", backgroundColor: Color("BlueColor"), foregroundColor: Color("BackgroundColor"), action: {
+                    CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor"), action: {
                         showingGame = true
                     })
                 }
@@ -33,8 +33,10 @@ struct MenuView: View {
     
 }
 
+#if DEBUG
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
         MenuView()
     }
 }
+#endif
