@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TimerView: View {
+    @AppStorage("ImageToTrack") var imageToTrack: Data = Data()
     
     @State var selectedMinute = 0
     let availableMinutes = Array(1...60)
@@ -43,7 +44,7 @@ struct TimerView: View {
                         }
                         .frame(width: 150, height: 44)
                         .background(Color("BackgroundColor"))
-                        .foregroundColor(Color("BlueColor"))
+                        .foregroundColor(Color("AccentColor"))
                         .cornerRadius(10)
                         .padding()
                         .shadow(color: Color("AccentColor"), radius: 8)
@@ -52,7 +53,7 @@ struct TimerView: View {
                             showingGame.toggle()
                         }
                         .frame(width: 150, height: 44)
-                        .background(Color("BlueColor"))
+                        .background(Color("AccentColor"))
                         .foregroundColor(Color("BackgroundColor"))
                         .cornerRadius(10)
                         .padding()
@@ -60,7 +61,7 @@ struct TimerView: View {
                     .padding()
                 }
             } else {
-                Player2GameView()
+                Player2GameView(imageToTrack: UIImage(data: imageToTrack)!)
             }
         }
         .preferredColorScheme(.dark)

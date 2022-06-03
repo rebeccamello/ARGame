@@ -6,20 +6,38 @@
 //
 
 import SwiftUI
+import ARKit
 import RealityKit
 
 struct Player2GameView : View {
+    var imageToTrack: UIImage
+    
     var body: some View {
         VStack {
-            ARViewContainer().edgesIgnoringSafeArea(.all)
+            ARViewContainer2(imageToTrack: imageToTrack)
+                .edgesIgnoringSafeArea(.all)
         }
     }
 }
 
 struct ARViewContainer2: UIViewRepresentable {
+    var imageToTrack: UIImage
     
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
+        
+        let arImage = ARReferenceImage(imageToTrack.cgImage!, orientation: .up, physicalWidth: 0.01)
+        arImage.name = "Image"
+        
+        var referenceImage = Set<ARReferenceImage>()
+        referenceImage.insert(arImage)
+        
+        let session = arView.session
+        let config = ARImageTrackingConfiguration()
+        config.trackingImages = referenceImage
+        config.maximumNumberOfTrackedImages = 1
+        
+        session.run(config, options: [.resetTracking, .removeExistingAnchors])
         
         // Load the "Box" scene from the "Experience" Reality File
         let boxAnchor = try! Experience.loadPlantingBomb()
@@ -36,7 +54,7 @@ struct ARViewContainer2: UIViewRepresentable {
 #if DEBUG
 struct ContentView_Previews2 : PreviewProvider {
     static var previews: some View {
-        Player2GameView()
+        Player2GameView(imageToTrack: UIImage())
     }
 }
 #endif

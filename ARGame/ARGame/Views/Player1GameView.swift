@@ -13,24 +13,31 @@ struct ARVariables{
 }
 
 struct Player1GameView : View {
+    @AppStorage("ImageToTrack") var imageToTrack: Data = Data()
+    
     var body: some View {
         //        ZStack {
         //            Color("BackgroundColor").ignoresSafeArea(.all)
         ZStack(alignment: .bottom) {
-            ARViewContainer().edgesIgnoringSafeArea(.all)
+            ARViewContainer()
+                .edgesIgnoringSafeArea(.all)
             
             Button {
                 ARVariables.arView.snapshot(saveToHDR: false) { (image) in
                     // Compress the image
-                    let compressedImage = UIImage(
-                        data: (image?.pngData())!)
-                    print("tirou a foto")
+                    if let image = image {
+                        imageToTrack = image.pngData()!
+                        print("Foto guardada no UserDefaults")
+                    } else {
+                        fatalError("Não conseguiu salvar a imagem no UserDefaults")
+                    }
                 }
             } label: {
                 Image(systemName: "camera")
                     .frame(width:60, height:60)
                     .font(.title)
-                    .background(Color("BackgroundColor").opacity(0.75))
+                    .background(Color("BackgroundColor")
+                    .opacity(0.75))
                     .cornerRadius(30)
                     .foregroundColor(Color("BlueColor"))
                     .padding()
