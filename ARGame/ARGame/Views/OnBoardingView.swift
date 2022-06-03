@@ -12,7 +12,8 @@ struct OnBoardingView: View {
     
     var body: some View {
         ZStack {
-            Color("BackgroundColor").ignoresSafeArea()
+            Color("BackgroundColor")
+                .ignoresSafeArea()
             
             TabView {
                 OnBoardingStruct(playerNumber: 1, shouldShowOnBoarding: $shouldShowOnBoarding)
