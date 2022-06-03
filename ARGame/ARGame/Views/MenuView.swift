@@ -16,9 +16,24 @@ struct MenuView: View {
             NavigationView {
                 ZStack {
                     Color("BackgroundColor").ignoresSafeArea(.all)
-                    CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor"), action: {
-                        showingGame = true
-                    })
+                    
+                    VStack (alignment: .center){
+                        
+                        Text("NOME DO JOGO")
+                            .foregroundColor(Color("BlueColor"))
+                            .font(.system(size: 30, design: .default))
+                            .padding()
+                        
+                        Image("imgMenu")
+                            .resizable()
+                            .scaledToFit()
+                            .padding()
+                        
+                        CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor"), action: {
+                            showingGame = true
+                        })
+                        .padding()
+                    }
                 }
                 .preferredColorScheme(.dark)
             }
