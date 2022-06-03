@@ -9,24 +9,36 @@ import SwiftUI
 
 struct TimerView: View {
     
-    @State var timerMode: TimerMode = .init()
+    @State var selectedMinute = 0
+    let availableMinutes = Array(1...60)
     
     var body: some View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea(.all)
             
-            VStack {
+            VStack (alignment: .center) {
                 Text("Objeto escolhido!")
-                    .foregroundColor(Color("TextColor"))
+                    .foregroundColor(Color("ForegroundColor"))
                     .font(.system(size: 30, design: .default))
                     .padding()
                 
-                Spacer()
-                
                 Text("Tempo para encontrar")
-                    .foregroundColor(Color("TextColor"))
+                    .foregroundColor(Color("ForegroundColor"))
                     .font(.system(size: 15, design: .default))
                     .padding()
+                
+                Picker("", selection: $selectedMinute){
+                    ForEach(0 ..< availableMinutes.count, id: \.self) { i in
+                        Text("\(i) min").tag(i)
+                    }
+                }
+                .frame(width: 10)
+                .pickerStyle(.inline)
+                
+                CustomButtons(text: "Começar", backgroundColor: Color("BlueColor"), foregroundColor: Color("BackgroundColor"), action: {
+                    print("vai")
+                })
+                .padding()
             }
         }
         .preferredColorScheme(.dark)

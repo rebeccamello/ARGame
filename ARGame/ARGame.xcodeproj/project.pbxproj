@@ -20,7 +20,6 @@
 		9D6CC61A2849343300BE4FD0 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC6192849343300BE4FD0 /* GameOverView.swift */; };
 		9DD722C728495BE100674090 /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722C628495BE100674090 /* CameraButton.swift */; };
 		9DD722C9284A757C00674090 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722C8284A757C00674090 /* TimerView.swift */; };
-		9DD722CB284A78F300674090 /* TimerMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722CA284A78F300674090 /* TimerMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +37,6 @@
 		9D6CC6192849343300BE4FD0 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		9DD722C628495BE100674090 /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
 		9DD722C8284A757C00674090 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		9DD722CA284A78F300674090 /* TimerMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +106,6 @@
 				9D6CC6152849275E00BE4FD0 /* OnBoardingSteps.swift */,
 				9D6CC61728492E2E00BE4FD0 /* CustomButtons.swift */,
 				9DD722C628495BE100674090 /* CameraButton.swift */,
-				9DD722CA284A78F300674090 /* TimerMode.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -191,7 +188,6 @@
 				9D6CC5FA28480B3F00BE4FD0 /* AppDelegate.swift in Sources */,
 				9D6CC60F2849238B00BE4FD0 /* OnBoardingView.swift in Sources */,
 				9DD722C9284A757C00674090 /* TimerView.swift in Sources */,
-				9DD722CB284A78F300674090 /* TimerMode.swift in Sources */,
 				9D6CC5FE28480B3F00BE4FD0 /* Experience.rcproject in Sources */,
 				9D6CC61A2849343300BE4FD0 /* GameOverView.swift in Sources */,
 				9D6CC6142849257B00BE4FD0 /* OnBoardingStruct.swift in Sources */,
