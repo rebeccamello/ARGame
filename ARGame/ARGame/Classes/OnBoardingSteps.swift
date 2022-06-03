@@ -18,11 +18,11 @@ struct OnBoardingSteps: View {
                 .font(.system(size: 50, design: .default))
                 .bold()
                 .foregroundColor(Color("AccentColor"))
-                .padding(.trailing)
+                .padding()
             
             VStack(alignment: .leading) {
                 Text(title)
-                    .font(.system(size: 18, design: .default))
+                    .font(.system(size: 18, design: .rounded))
                     .bold()
                     .foregroundColor(Color("ForegroundColor"))
                 
