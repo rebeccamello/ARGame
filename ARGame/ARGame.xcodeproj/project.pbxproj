@@ -20,6 +20,7 @@
 		9D6CC61A2849343300BE4FD0 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC6192849343300BE4FD0 /* GameOverView.swift */; };
 		9DD722C728495BE100674090 /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722C628495BE100674090 /* CameraButton.swift */; };
 		9DD722C9284A757C00674090 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722C8284A757C00674090 /* TimerView.swift */; };
+		9DD722CD284A830800674090 /* Player2GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722CC284A830800674090 /* Player2GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		9D6CC6192849343300BE4FD0 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		9DD722C628495BE100674090 /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
 		9DD722C8284A757C00674090 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		9DD722CC284A830800674090 /* Player2GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player2GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				9D6CC6192849343300BE4FD0 /* GameOverView.swift */,
 				9D6CC5FB28480B3F00BE4FD0 /* Player1GameView.swift */,
 				9DD722C8284A757C00674090 /* TimerView.swift */,
+				9DD722CC284A830800674090 /* Player2GameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DD722CD284A830800674090 /* Player2GameView.swift in Sources */,
 				9D6CC61828492E2E00BE4FD0 /* CustomButtons.swift in Sources */,
 				9D6CC5FC28480B3F00BE4FD0 /* Player1GameView.swift in Sources */,
 				9DD722C728495BE100674090 /* CameraButton.swift in Sources */,
