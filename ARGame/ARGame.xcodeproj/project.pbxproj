@@ -99,10 +99,10 @@
 			children = (
 				9D6CC60B2849233200BE4FD0 /* MenuView.swift */,
 				9D6CC60E2849238B00BE4FD0 /* OnBoardingView.swift */,
-				9D6CC6192849343300BE4FD0 /* GameOverView.swift */,
 				9D6CC5FB28480B3F00BE4FD0 /* Player1GameView.swift */,
-				9DD722C8284A757C00674090 /* TimerView.swift */,
 				9DD722CC284A830800674090 /* Player2GameView.swift */,
+				9DD722C8284A757C00674090 /* TimerView.swift */,
+				9D6CC6192849343300BE4FD0 /* GameOverView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

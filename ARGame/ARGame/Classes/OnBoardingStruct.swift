@@ -18,7 +18,7 @@ struct OnBoardingStruct: View {
                 VStack(alignment: .leading) {
                     Image("bomba2")
                         .resizable()
-                        .frame(width: 270, height: 270)
+                        .frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.35)
                         .scaledToFit()
                         .padding(.top, 40)
                         .padding(.leading, 40)
@@ -38,6 +38,7 @@ struct OnBoardingStruct: View {
                 VStack(alignment: .leading) {
                     Image("lupa")
                         .resizable()
+                        .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.3)
                         .scaledToFit()
                         .padding()
                 }
