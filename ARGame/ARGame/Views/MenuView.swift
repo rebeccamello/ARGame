@@ -19,7 +19,7 @@ struct MenuView: View {
                     Color("BackgroundColor")
                         .ignoresSafeArea(.all)
                     
-                    VStack (alignment: .center){
+                    VStack (alignment: .center) {
                         
                         Text("defusAR")
                             .foregroundColor(Color("AccentColor"))
@@ -32,9 +32,9 @@ struct MenuView: View {
                             .scaledToFit()
                             .padding()
                         
-                        CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor"), action: {
+                        CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor")) {
                             showingCamera = true
-                        })
+                        }
                         .padding()
                     }
                 }

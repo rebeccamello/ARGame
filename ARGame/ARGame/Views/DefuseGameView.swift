@@ -9,6 +9,15 @@ import SwiftUI
 import ARKit
 import RealityKit
 
+enum ImageNames: String {
+    case carregador = "Carregador"
+    case appleMac = "AppleMac"
+    case tia = "TIA"
+    case porta = "Porta"
+    case locker = "Locker"
+    case banquinho = "Banquinho"
+}
+
 struct DefuseGameView: View {
     var body: some View {
         VStack {
@@ -38,24 +47,17 @@ struct ARViewContainer: UIViewRepresentable {
                 return
             }
             
-            if let imageName = imageAnchor.name, imageName  == "Image" {
-                let anchor = AnchorEntity(anchor: imageAnchor)
+            if let imageName = imageAnchor.name, let _ = ImageNames(rawValue: imageName) {
+                let anchorEntity = AnchorEntity(anchor: imageAnchor)
                 
                 if let scene = try? Experience.loadPlantingBomb() {
                     if let bomb = scene.findEntity(named: "Bomb") {
-                        anchor.addChild(bomb)
-                        parent.arView.scene.addAnchor(anchor)
+                        anchorEntity.addChild(bomb)
+                        parent.arView.scene.addAnchor(anchorEntity)
                     }
                 }
             }
         }
-        
-//        func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
-//            guard let imageAnchor = anchors[0] as? ARImageAnchor else {
-//                print("Problems loading anchor.")
-//                return
-//            }
-//        }
     }
     
     func makeUIView(context: Context) -> ARView {
@@ -78,7 +80,7 @@ struct ARViewContainer: UIViewRepresentable {
 }
 
 #if DEBUG
-struct ContentView_Previews2 : PreviewProvider {
+struct ARViewContainer_Previews: PreviewProvider {
     static var previews: some View {
         DefuseGameView()
     }
