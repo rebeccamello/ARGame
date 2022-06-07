@@ -10,12 +10,8 @@ import ARKit
 import RealityKit
 
 enum ImageNames: String {
-    case carregador = "Carregador"
-    case appleMac = "AppleMac"
     case tia = "TIA"
-    case porta = "Porta"
-    case locker = "Locker"
-    case banquinho = "Banquinho"
+    case bu = "BU"
 }
 
 struct DefuseGameView: View {
