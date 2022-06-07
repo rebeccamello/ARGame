@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MenuView: View {
     @AppStorage("shouldShowOnBoarding") var shouldShowOnBoarding: Bool = true
-    @State private var showingCamera: Bool = false
+//    @State private var showingCamera: Bool = false
     @State private var showingGame: Bool = false
     
     var body: some View {
@@ -33,7 +33,7 @@ struct MenuView: View {
                             .padding()
                         
                         CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor")) {
-                            showingCamera = true
+                            showingGame = true
                         }
                         .padding()
                     }
@@ -43,11 +43,8 @@ struct MenuView: View {
             .fullScreenCover(isPresented: $shouldShowOnBoarding) {
                 OnBoardingView(shouldShowOnBoarding: $shouldShowOnBoarding)
             }
-            .fullScreenCover(isPresented: $showingCamera) {
-                CameraView(showingCamera: $showingCamera, showingGame: $showingGame)
-            }
         } else {
-            DefuseGameView()
+            SetBombView()
         }
     }
 }
