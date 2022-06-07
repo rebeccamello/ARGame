@@ -17,13 +17,12 @@ struct DefuseGameView: View {
     
     
     var body: some View {
-        ZStack {
+        ZStack (alignment: .bottom){
             ARViewContainer(showButton: $showButton, isPlanting: false)
                 .edgesIgnoringSafeArea(.all)
             
             TimerStruct()
         }
-        
     }
 }
 
