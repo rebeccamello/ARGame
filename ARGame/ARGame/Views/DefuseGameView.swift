@@ -15,7 +15,6 @@ enum ImageNames: String {
 struct DefuseGameView: View {
     @State var showButton: Bool = false
     
-    
     var body: some View {
         ZStack (alignment: .bottom){
             ARViewContainer(showButton: $showButton, isPlanting: false)
@@ -31,18 +30,23 @@ struct TimerStruct: View {
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        VStack {
-            Text("\(vm.time)")
-                .font(.system(size: 30))
-            
-            Button("Start") {
-                vm.start(minutes: vm.minutes)
+        if !vm.showingAlert {
+            VStack {
+                Text("\(vm.time)")
+                    .font(.system(size: 30))
+                
+                Button("Começar") {
+                    vm.start(minutes: vm.minutes)
+                }
+                .disabled(vm.isActive)
             }
-            .disabled(vm.isActive)
+            .onReceive(timer) { _ in
+                vm.updateCountdown()
+            }
+        } else {
+            GameOverView(titleText: "ddsdf", text: "ddsdf", time: "ddsdf")
         }
-        .onReceive(timer) { _ in
-            vm.updateCountdown()
-        }
+        
     }
 }
 

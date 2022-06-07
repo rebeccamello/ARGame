@@ -11,7 +11,6 @@ struct GameOverView: View {
     var titleText: String
     var text: String
     var time: String
-    var imageName: String
     @State private var goToMenu: Bool = false
     
     var body: some View {
@@ -39,7 +38,7 @@ struct GameOverView: View {
                         .font(.title3)
                         .padding()
                     
-                    Image(imageName)
+                    Image("bomba1")
                         .resizable()
                         .frame(width: 200, height: 200)
                         .scaledToFit()
@@ -70,7 +69,7 @@ struct GameOverView: View {
 #if DEBUG
 struct GameOverView_Previews: PreviewProvider {
     static var previews: some View {
-        GameOverView(titleText: "Parabens!", text: "Você conseguiu desarmar a bomba antes do tempo!", time: "05:00", imageName: "bomba1")
+        GameOverView(titleText: "Parabens!", text: "Você conseguiu desarmar a bomba antes do tempo!", time: "05:00")
     }
 }
 #endif
