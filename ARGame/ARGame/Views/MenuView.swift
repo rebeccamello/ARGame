@@ -9,21 +9,21 @@ import SwiftUI
 
 struct MenuView: View {
     @AppStorage("shouldShowOnBoarding") var shouldShowOnBoarding: Bool = true
-    @State private var showingGame = false
+    @State private var showingCamera: Bool = false
+    @State private var showingGame: Bool = false
     
     var body: some View {
         if !showingGame {
             NavigationView {
                 ZStack {
-                    Color("BackgroundColor").ignoresSafeArea(.all)
+                    Color("BackgroundColor")
+                        .ignoresSafeArea(.all)
                     
-                    VStack (alignment: .center){
+                    VStack (alignment: .center) {
                         
                         Text("defusAR")
-                            .foregroundColor(Color("BlueColor"))
-                            .font(.custom(
-                                "DESIGNER", size: 100
-                        ))
+                            .foregroundColor(Color("AccentColor"))
+                            .font(.custom("DESIGNER", size: 100))
                             .padding()
                         
                         Image("imgMenu")
@@ -32,23 +32,24 @@ struct MenuView: View {
                             .scaledToFit()
                             .padding()
                         
-                        CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor"), action: {
-                            showingGame = true
-                        })
+                        CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor")) {
+                            showingCamera = true
+                        }
                         .padding()
                     }
                 }
                 .preferredColorScheme(.dark)
             }
-            .fullScreenCover(isPresented: $shouldShowOnBoarding, content: {
+            .fullScreenCover(isPresented: $shouldShowOnBoarding) {
                 OnBoardingView(shouldShowOnBoarding: $shouldShowOnBoarding)
-            })
+            }
+            .fullScreenCover(isPresented: $showingCamera) {
+                CameraView(showingCamera: $showingCamera, showingGame: $showingGame)
+            }
         } else {
-            Player1GameView()
+            DefuseGameView()
         }
-        
     }
-    
 }
 
 #if DEBUG
