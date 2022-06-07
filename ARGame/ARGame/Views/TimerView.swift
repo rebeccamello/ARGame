@@ -13,7 +13,6 @@ struct TimerView: View {
     @State var selectedMinute = 0
     let availableMinutes = Array(1...60)
     @State private var showingGame = false
-    @StateObject private var viewModel = TimerViewModel()
     
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     

@@ -20,7 +20,7 @@ struct MenuView: View {
                     VStack (alignment: .center){
                         
                         Text("NOME DO JOGO")
-                            .foregroundColor(Color("BlueColor"))
+                            .foregroundColor(Color("AccentColor"))
                             .font(.system(size: 30, design: .default))
                             .padding()
                         
