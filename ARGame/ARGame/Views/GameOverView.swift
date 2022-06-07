@@ -21,7 +21,7 @@ struct GameOverView: View {
             VStack {
                 Text(titleText)
                     .foregroundColor(Color("ForegroundColor"))
-                    .font(.system(size: 54))
+                    .font(.custom("DESIGNER", size: 60))
                     .bold()
                     .padding()
                 
@@ -38,7 +38,7 @@ struct GameOverView: View {
                 
                 Image(imageName)
                     .resizable()
-                    .frame(width: 200, height: 200)
+                    .frame(width: UIScreen.main.bounds.width * 0.65, height: UIScreen.main.bounds.height * 0.27)
                     .scaledToFit()
                     .padding()
                 

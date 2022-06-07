@@ -21,6 +21,7 @@
 		9DD722C728495BE100674090 /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722C628495BE100674090 /* CameraButton.swift */; };
 		9DD722C9284A757C00674090 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722C8284A757C00674090 /* TimerView.swift */; };
 		9DD722CD284A830800674090 /* Player2GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722CC284A830800674090 /* Player2GameView.swift */; };
+		9DEBC8AD284AACDA0094F8C6 /* DESIGNER.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBC8AC284AACDA0094F8C6 /* DESIGNER.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		9DD722C628495BE100674090 /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
 		9DD722C8284A757C00674090 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		9DD722CC284A830800674090 /* Player2GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player2GameView.swift; sourceTree = "<group>"; };
+		9DEBC8AC284AACDA0094F8C6 /* DESIGNER.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DESIGNER.otf; sourceTree = "<group>"; };
+		9DEBC8AE284AAE0F0094F8C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 		9D6CC5F828480B3F00BE4FD0 /* ARGame */ = {
 			isa = PBXGroup;
 			children = (
+				9DEBC8AE284AAE0F0094F8C6 /* Info.plist */,
+				9DEBC8AC284AACDA0094F8C6 /* DESIGNER.otf */,
 				9D6CC6122849256B00BE4FD0 /* Classes */,
 				9D6CC60D2849237F00BE4FD0 /* Views */,
 				9D6CC5F928480B3F00BE4FD0 /* AppDelegate.swift */,
@@ -94,10 +99,10 @@
 			children = (
 				9D6CC60B2849233200BE4FD0 /* MenuView.swift */,
 				9D6CC60E2849238B00BE4FD0 /* OnBoardingView.swift */,
-				9D6CC6192849343300BE4FD0 /* GameOverView.swift */,
 				9D6CC5FB28480B3F00BE4FD0 /* Player1GameView.swift */,
-				9DD722C8284A757C00674090 /* TimerView.swift */,
 				9DD722CC284A830800674090 /* Player2GameView.swift */,
+				9DD722C8284A757C00674090 /* TimerView.swift */,
+				9D6CC6192849343300BE4FD0 /* GameOverView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D6CC60328480B4100BE4FD0 /* Preview Assets.xcassets in Resources */,
+				9DEBC8AD284AACDA0094F8C6 /* DESIGNER.otf in Resources */,
 				9D6CC60028480B4100BE4FD0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +332,7 @@
 				DEVELOPMENT_TEAM = 337G99FP8D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ARGame/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -357,6 +364,7 @@
 				DEVELOPMENT_TEAM = 337G99FP8D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ARGame/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

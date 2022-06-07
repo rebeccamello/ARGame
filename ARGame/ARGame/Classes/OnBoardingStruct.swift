@@ -15,10 +15,14 @@ struct OnBoardingStruct: View {
     var body: some View {
         if (playerNumber == 1) {
             VStack {
-                VStack (alignment: .center) {
-                    Text("Player 1")
-                        .font(.system(size: 40, design: .default))
-                        .foregroundColor(Color("ForegroundColor"))
+                VStack(alignment: .leading) {
+                    Image("bomba2")
+                        .resizable()
+                        .frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.35)
+                        .scaledToFit()
+                        .padding(.top, 40)
+                        .padding(.leading, 40)
+                        .padding(.bottom, 0)
                 }
                 
                 VStack (alignment: .leading) {
@@ -34,6 +38,7 @@ struct OnBoardingStruct: View {
                 VStack(alignment: .leading) {
                     Image("lupa")
                         .resizable()
+                        .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.3)
                         .scaledToFit()
                         .padding()
                 }

@@ -19,13 +19,16 @@ struct MenuView: View {
                     
                     VStack (alignment: .center){
                         
-                        Text("NOME DO JOGO")
+                        Text("defusAR")
                             .foregroundColor(Color("BlueColor"))
-                            .font(.system(size: 30, design: .default))
+                            .font(.custom(
+                                "DESIGNER", size: 100
+                        ))
                             .padding()
                         
                         Image("imgMenu")
                             .resizable()
+                            .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.35)
                             .scaledToFit()
                             .padding()
                         
