@@ -9,43 +9,44 @@ import SwiftUI
 
 struct MenuView: View {
     @AppStorage("shouldShowOnBoarding") var shouldShowOnBoarding: Bool = true
-    @State private var showingGame = false
+//    @State private var showingCamera: Bool = false
+    @State private var showingGame: Bool = false
     
     var body: some View {
         if !showingGame {
             NavigationView {
                 ZStack {
-                    Color("BackgroundColor").ignoresSafeArea(.all)
+                    Color("BackgroundColor")
+                        .ignoresSafeArea(.all)
                     
-                    VStack (alignment: .center){
+                    VStack (alignment: .center) {
                         
-                        Text("NOME DO JOGO")
+                        Text("defusAR")
                             .foregroundColor(Color("AccentColor"))
-                            .font(.system(size: 30, design: .default))
+                            .font(.custom("DESIGNER", size: 100))
                             .padding()
                         
                         Image("imgMenu")
                             .resizable()
+                            .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.35)
                             .scaledToFit()
                             .padding()
                         
-                        CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor"), action: {
+                        CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor")) {
                             showingGame = true
-                        })
+                        }
                         .padding()
                     }
                 }
                 .preferredColorScheme(.dark)
             }
-            .fullScreenCover(isPresented: $shouldShowOnBoarding, content: {
+            .fullScreenCover(isPresented: $shouldShowOnBoarding) {
                 OnBoardingView(shouldShowOnBoarding: $shouldShowOnBoarding)
-            })
+            }
         } else {
-            Player1GameView()
+            SetBombView()
         }
-        
     }
-    
 }
 
 #if DEBUG

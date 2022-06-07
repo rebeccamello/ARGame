@@ -63,7 +63,7 @@ struct TimerView: View {
                     .padding()
                 }
             } else {
-                Player2GameView(imageToTrack: UIImage(data: imageToTrack)!)
+                DefuseGameView()
             }
         }
         .preferredColorScheme(.dark)
