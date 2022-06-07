@@ -14,7 +14,6 @@ struct ARViewContainer: UIViewRepresentable {
     @Binding var showButton: Bool
     var isPlanting: Bool
     var arView = ARView(frame: .zero)
-//    let button = UIButton(configuration: .filled())
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self, showButton: $showButton)
@@ -44,7 +43,6 @@ struct ARViewContainer: UIViewRepresentable {
                         anchorEntity.addChild(bomb)
                         parent.arView.scene.addAnchor(anchorEntity)
                         parent.showButton = true
-//                        parent.button.alpha = 1
                     }
                 }
             }
@@ -52,19 +50,6 @@ struct ARViewContainer: UIViewRepresentable {
     }
     
     func makeUIView(context: Context) -> ARView {
-//        arView.addSubview(button)
-//        button.setTitle("AOBA", for: .normal)
-//        button.alpha = 0
-//
-//        button.leadingAnchor.constraint(equalTo: arView.leadingAnchor, constant: 30).isActive = true
-//        button.trailingAnchor.constraint(equalTo: arView.trailingAnchor, constant: -30).isActive = true
-//        button.topAnchor.constraint(equalTo: arView.bottomAnchor, constant: -120).isActive = true
-//        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
-//
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//
-//        button.addTarget(self, action: #selector(changeView()), for: .touchUpInside)
-        
         let configuration = ARImageTrackingConfiguration()
         
         if let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) {
