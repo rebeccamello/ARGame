@@ -44,7 +44,7 @@ struct TimerStruct: View {
                 vm.updateCountdown()
             }
         } else {
-            GameOverView(titleText: "ddsdf", text: "ddsdf", time: "ddsdf")
+            GameOverView(titleText: "Que pena!", text: "Você não conseguiu desarmar a  bomba antes do tempo!", time: "00:00")
         }
         
     }
