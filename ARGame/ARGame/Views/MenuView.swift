@@ -9,18 +9,20 @@ import SwiftUI
 
 struct MenuView: View {
     @AppStorage("shouldShowOnBoarding") var shouldShowOnBoarding: Bool = true
-    @State private var showingGame = false
+    @State private var showingCamera: Bool = false
+    @State private var showingGame: Bool = false
     
     var body: some View {
         if !showingGame {
             NavigationView {
                 ZStack {
-                    Color("BackgroundColor").ignoresSafeArea(.all)
+                    Color("BackgroundColor")
+                        .ignoresSafeArea(.all)
                     
                     VStack (alignment: .center){
                         
                         Text("NOME DO JOGO")
-                            .foregroundColor(Color("BlueColor"))
+                            .foregroundColor(Color("AccentColor"))
                             .font(.system(size: 30, design: .default))
                             .padding()
                         
@@ -30,22 +32,23 @@ struct MenuView: View {
                             .padding()
                         
                         CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor"), action: {
-                            showingGame = true
+                            showingCamera = true
                         })
                         .padding()
                     }
                 }
                 .preferredColorScheme(.dark)
             }
-            .fullScreenCover(isPresented: $shouldShowOnBoarding, content: {
+            .fullScreenCover(isPresented: $shouldShowOnBoarding) {
                 OnBoardingView(shouldShowOnBoarding: $shouldShowOnBoarding)
-            })
+            }
+            .fullScreenCover(isPresented: $showingCamera) {
+                CameraView(showingCamera: $showingCamera, showingGame: $showingGame)
+            }
         } else {
-            Player1GameView()
+            DefuseGameView()
         }
-        
     }
-    
 }
 
 #if DEBUG
