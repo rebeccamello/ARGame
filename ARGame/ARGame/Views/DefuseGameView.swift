@@ -15,10 +15,34 @@ enum ImageNames: String {
 struct DefuseGameView: View {
     @State var showButton: Bool = false
     
+    
     var body: some View {
-        VStack {
+        ZStack {
             ARViewContainer(showButton: $showButton, isPlanting: false)
                 .edgesIgnoringSafeArea(.all)
+            
+            TimerStruct()
+        }
+        
+    }
+}
+
+struct TimerStruct: View {
+    @StateObject private var vm = ViewModel()
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    var body: some View {
+        VStack {
+            Text("\(vm.time)")
+                .font(.system(size: 30))
+            
+            Button("Start") {
+                vm.start(minutes: vm.minutes)
+            }
+            .disabled(vm.isActive)
+        }
+        .onReceive(timer) { _ in
+            vm.updateCountdown()
         }
     }
 }

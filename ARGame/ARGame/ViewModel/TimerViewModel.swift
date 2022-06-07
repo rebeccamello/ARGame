@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Player2GameView {
+extension TimerStruct {
     final class ViewModel: ObservableObject {
             @Published var isActive = false
             @Published var showingAlert = false
