@@ -10,9 +10,11 @@ import SwiftUI
 struct TimerView: View {
     @AppStorage("ImageToTrack") var imageToTrack: Data = Data()
     
-    @State var selectedMinute = 0
+    @State var selectedMinute = 1
     let availableMinutes = Array(1...60)
     @State private var showingGame = false
+    
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ZStack {
@@ -61,7 +63,7 @@ struct TimerView: View {
                     .padding()
                 }
             } else {
-                DefuseGameView()
+                DefuseGameView(selectedMinute: $selectedMinute)
             }
         }
         .preferredColorScheme(.dark)

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MenuView: View {
     @AppStorage("shouldShowOnBoarding") var shouldShowOnBoarding: Bool = true
-//    @State private var showingCamera: Bool = false
     @State private var showingGame: Bool = false
     
     var body: some View {
