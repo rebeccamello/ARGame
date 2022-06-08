@@ -10,12 +10,14 @@ import SwiftUI
 struct GameOverView: View {
     var titleText: String
     var text: String
+    var imageName: String
     var time: String
     @State private var goToMenu: Bool = false
+    @State private var playAgain: Bool = false
     
     var body: some View {
         
-        if !goToMenu {
+        if !goToMenu && !playAgain{
             ZStack {
                 Color("BackgroundColor")
                     .ignoresSafeArea()
@@ -38,14 +40,15 @@ struct GameOverView: View {
                         .font(.title3)
                         .padding()
                     
-                    Image("bomba1")
+                    Image(imageName)
                         .resizable()
-                        .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.35)
+                        .frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.35)
                         .scaledToFit()
                         .padding()
                     
                     CustomButtons(text: "Jogar novamente", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor"), action: {
                         print("vai de novo")
+                        playAgain = true
                     })
                     
                     Button("Menu") {
@@ -60,16 +63,14 @@ struct GameOverView: View {
                 }
             }
             .preferredColorScheme(.dark)
-        } else {
+        }
+        
+        else if !goToMenu && playAgain {
+            SetBombView()
+        }
+        
+        else {
             MenuView()
         }
     }
 }
-
-#if DEBUG
-struct GameOverView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameOverView(titleText: "Parabens!", text: "Você conseguiu desarmar a bomba antes do tempo!", time: "05:00")
-    }
-}
-#endif

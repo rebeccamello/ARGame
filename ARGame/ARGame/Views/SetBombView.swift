@@ -21,7 +21,6 @@ struct SetBombView: View {
             }
         }
         .fullScreenCover(isPresented: $showingTimer) {
-            Text("Roberta Reberta")
             //DefuseGameView(minutesOnTimer: 0, selectedMinute: <#Binding<Int>#>)
         } content: {
             TimerView()
