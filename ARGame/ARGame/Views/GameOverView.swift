@@ -41,16 +41,14 @@ struct GameOverView: View {
                     
                     Image(imageName)
                         .resizable()
-                        .frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.35)
                         .scaledToFit()
                         .padding()
                     
-                    CustomButtons(text: "Jogar novamente", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor"), action: {
-                        print("vai de novo")
+                    CustomButtons(text: "JOGAR NOVAMENTE", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor")) {
                         playAgain = true
-                    })
+                    }
                     
-                    Button("Menu") {
+                    Button("MENU") {
                         goToMenu = true
                     }
                     .frame(width: 200, height: 44)
@@ -65,7 +63,7 @@ struct GameOverView: View {
         }
         
         else if !goToMenu && playAgain {
-            SetBombView()
+            SetBombView(gameDataViewModel: GameDataViewModel())
         }
         
         else {
