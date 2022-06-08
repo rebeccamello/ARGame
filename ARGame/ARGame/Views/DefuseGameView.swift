@@ -7,26 +7,22 @@
 
 import SwiftUI
 
-enum ImageNames: String {
-    case tia = "TIA"
-    case bu = "BU"
-}
-
 struct DefuseGameView: View {
     @State var showButton: Bool = false
+    var gameDataViewModel: GameDataViewModel
     
     var body: some View {
         VStack {
-            ARViewContainer(showButton: $showButton, isPlanting: false)
+            ARViewContainer(showButton: $showButton, isPlanting: false, gameDataViewModel: gameDataViewModel)
                 .edgesIgnoringSafeArea(.all)
         }
     }
 }
 
 #if DEBUG
-struct ARViewContainer_Previews: PreviewProvider {
-    static var previews: some View {
-        DefuseGameView()
-    }
-}
+//struct ARViewContainer_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DefuseGameView()
+//    }
+//}
 #endif

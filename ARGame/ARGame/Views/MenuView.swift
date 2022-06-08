@@ -12,6 +12,8 @@ struct MenuView: View {
 //    @State private var showingCamera: Bool = false
     @State private var showingGame: Bool = false
     
+    var gameDataViewModel = GameDataViewModel()
+    
     var body: some View {
         if !showingGame {
             NavigationView {
@@ -44,15 +46,15 @@ struct MenuView: View {
                 OnBoardingView(shouldShowOnBoarding: $shouldShowOnBoarding)
             }
         } else {
-            SetBombView()
+            SetBombView(gameDataViewModel: gameDataViewModel)
         }
     }
 }
 
 #if DEBUG
-struct MenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuView()
-    }
-}
+//struct MenuView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MenuView()
+//    }
+//}
 #endif

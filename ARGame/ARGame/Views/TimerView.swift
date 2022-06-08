@@ -14,6 +14,10 @@ struct TimerView: View {
     let availableMinutes = Array(1...60)
     @State private var showingGame = false
     
+    var gameDataViewModel: GameDataViewModel
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea(.all)
@@ -50,7 +54,7 @@ struct TimerView: View {
                         .shadow(color: Color("AccentColor"), radius: 8)
                         
                         Button("Começar") {
-                            showingGame.toggle()
+                            showingGame = true
                         }
                         .frame(width: 150, height: 44)
                         .background(Color("AccentColor"))
@@ -61,15 +65,15 @@ struct TimerView: View {
                     .padding()
                 }
             } else {
-                DefuseGameView()
+                DefuseGameView(gameDataViewModel: gameDataViewModel)
             }
         }
         .preferredColorScheme(.dark)
     }
 }
 
-struct TimerBiew_Previews: PreviewProvider {
-    static var previews: some View {
-        TimerView()
-    }
-}
+//struct TimerBiew_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TimerView()
+//    }
+//}

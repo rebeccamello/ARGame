@@ -10,22 +10,23 @@ import SwiftUI
 struct SetBombView: View {
     @State var showButton: Bool = false
     @State var showingTimer: Bool = false
+    var gameDataViewModel: GameDataViewModel
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            ARViewContainer(showButton: $showButton, isPlanting: true)
+            ARViewContainer(showButton: $showButton, isPlanting: true, gameDataViewModel: gameDataViewModel)
                 .edgesIgnoringSafeArea(.all)
             
             ConditionalButton(showButton: $showButton, text: "PLANTAR BOMBA", backgroundColor: .accentColor, foregroundColor: Color("BackgroundColor")) {
                 showingTimer = true
+                
             }
         }
         .fullScreenCover(isPresented: $showingTimer) {
-            DefuseGameView()
+            DefuseGameView(gameDataViewModel: gameDataViewModel)
         } content: {
-            TimerView()
+            TimerView(gameDataViewModel: gameDataViewModel)
         }
-
     }
 }
 
@@ -45,8 +46,8 @@ struct ConditionalButton: View {
     }
 }
 
-struct SetBombView_Previews: PreviewProvider {
-    static var previews: some View {
-        SetBombView()
-    }
-}
+//struct SetBombView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SetBombView()
+//    }
+//}
