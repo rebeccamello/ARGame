@@ -17,48 +17,33 @@ struct DefuseGameView: View {
     @Binding var selectedMinute: Int
     
     var body: some View {
-        ZStack (alignment: .bottom){
+        ZStack (alignment: .top){
             ARViewContainer(showButton: $showButton, isPlanting: false)
                 .edgesIgnoringSafeArea(.all)
             
-            TimerStruct(viewModel: TimerStruct.ViewModel(min: selectedMinute))
+            TimerStruct(initialTime: TimeInterval(selectedMinute * 60))
         }
     }
 }
 
 struct TimerStruct: View {
-    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @ObservedObject private var vm: ViewModel
+    @ObservedObject private var viewModel: TimerViewModel
     
-    init(viewModel: ViewModel) {
-        self.vm = viewModel
+    init(initialTime: TimeInterval) {
+        self.viewModel = TimerViewModel(initialTime: initialTime)
     }
     
     var body: some View {
-        if !vm.showingAlert {
+        if !viewModel.timeEnded {
             VStack {
-                Text("\(vm.time)")
-                    .font(.system(size: 30))
-                
-                Button("Começar") {
-                    vm.start(minutes: vm.minutes)
-                }
-                .disabled(vm.isActive)
+                Text("\(viewModel.formatedTime)")
+                    .font(.system(size: 30, weight: .bold, design: .monospaced))
+                    .padding()
             }
-            .onReceive(timer) { _ in
-                vm.updateCountdown()
-            }
+            .onReceive(viewModel.timer, perform: viewModel.update)
         } else {
             GameOverView(titleText: "Que pena!", text: "Você não conseguiu desarmar a  bomba antes do tempo!", time: "00:00")
         }
         
     }
 }
-
-//#if DEBUG
-//struct ARViewContainer_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DefuseGameView()
-//    }
-//}
-//#endif
