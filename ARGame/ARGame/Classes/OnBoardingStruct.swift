@@ -26,9 +26,9 @@ struct OnBoardingStruct: View {
                 }
                 
                 VStack (alignment: .leading) {
-                    OnBoardingSteps(stepNumber: 1, title: "Escolha um objeto", description: "Escolha um objeto no ambiente em que você está")
+                    OnBoardingSteps(stepNumber: 1, title: "Escolha a âncora", description: "Escolha o objeto que será a âncora onde a bomba ficará escondida")
                     
-                    OnBoardingSteps(stepNumber: 2, title: "Tire foto do objeto", description: "Capture uma imagem de perto do objeto para esconder a bomba")
+                    OnBoardingSteps(stepNumber: 2, title: "Plante a bomba", description: "Aperte no botão 'Plantar âncora' para que a bomba se instale nele")
                     
                     OnBoardingSteps(stepNumber: 3, title: "Configure o tempo", description: "Indique em quanto tempo o outro jogador deve encontrar o objeto com a bomba")
                 }

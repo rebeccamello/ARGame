@@ -19,6 +19,7 @@
 		9D6CC6162849275E00BE4FD0 /* OnBoardingSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC6152849275E00BE4FD0 /* OnBoardingSteps.swift */; };
 		9D6CC61828492E2E00BE4FD0 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC61728492E2E00BE4FD0 /* CustomButtons.swift */; };
 		9D6CC61A2849343300BE4FD0 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6CC6192849343300BE4FD0 /* GameOverView.swift */; };
+		9DCA222D284EA64E003C5F6B /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCA222C284EA64E003C5F6B /* TimerViewModel.swift */; };
 		9DD722C728495BE100674090 /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722C628495BE100674090 /* CameraButton.swift */; };
 		9DD722C9284A757C00674090 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722C8284A757C00674090 /* TimerView.swift */; };
 		9DD722CD284A830800674090 /* DefuseGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD722CC284A830800674090 /* DefuseGameView.swift */; };
@@ -41,6 +42,7 @@
 		9D6CC6152849275E00BE4FD0 /* OnBoardingSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSteps.swift; sourceTree = "<group>"; };
 		9D6CC61728492E2E00BE4FD0 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		9D6CC6192849343300BE4FD0 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		9DCA222C284EA64E003C5F6B /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		9DD722C628495BE100674090 /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
 		9DD722C8284A757C00674090 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		9DD722CC284A830800674090 /* DefuseGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefuseGameView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		9D6CC5F828480B3F00BE4FD0 /* ARGame */ = {
 			isa = PBXGroup;
 			children = (
+				9DCA222B284EA63E003C5F6B /* ViewModel */,
 				9DEBC8AE284AAE0F0094F8C6 /* Info.plist */,
 				9DEBC8AC284AACDA0094F8C6 /* DESIGNER.otf */,
 				9D6CC6122849256B00BE4FD0 /* Classes */,
@@ -125,6 +128,14 @@
 				C0383F7B2850CA3F00A96222 /* Card.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		9DCA222B284EA63E003C5F6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9DCA222C284EA64E003C5F6B /* TimerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 				9DD722CD284A830800674090 /* DefuseGameView.swift in Sources */,
 				9D39FBD6284FDD1B0067463E /* SetBombView.swift in Sources */,
 				9D6CC61828492E2E00BE4FD0 /* CustomButtons.swift in Sources */,
+				9DCA222D284EA64E003C5F6B /* TimerViewModel.swift in Sources */,
 				9DD722C728495BE100674090 /* CameraButton.swift in Sources */,
 				9D6CC60C2849233200BE4FD0 /* MenuView.swift in Sources */,
 				9D6CC6162849275E00BE4FD0 /* OnBoardingSteps.swift in Sources */,
@@ -339,7 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ARGame/Preview Content\"";
 				DEVELOPMENT_TEAM = 337G99FP8D;
 				ENABLE_PREVIEWS = YES;
@@ -371,7 +383,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ARGame/Preview Content\"";
 				DEVELOPMENT_TEAM = 337G99FP8D;
 				ENABLE_PREVIEWS = YES;
