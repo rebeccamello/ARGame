@@ -19,9 +19,7 @@ struct MenuView: View {
                 ZStack {
                     Color("BackgroundColor")
                         .ignoresSafeArea(.all)
-                    
-                    VStack (alignment: .center) {
-                        
+                    VStack {
                         Text("defusAR")
                             .foregroundColor(Color("AccentColor"))
                             .font(.custom("DESIGNER", size: 100))
@@ -33,14 +31,15 @@ struct MenuView: View {
                             .scaledToFit()
                             .padding()
                         
-                        CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor")) {
+                        CustomButtons(text: "COMEÇAR", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor")) {
                             showingGame = true
                         }
                         .padding()
                     }
                 }
-                .preferredColorScheme(.dark)
+                .navigationBarTitleDisplayMode(.inline)
             }
+            .preferredColorScheme(.dark)
             .fullScreenCover(isPresented: $shouldShowOnBoarding) {
                 OnBoardingView(shouldShowOnBoarding: $shouldShowOnBoarding)
             }

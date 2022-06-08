@@ -5,16 +5,22 @@
   },
   "resources" : [
     {
-      "filename" : "Symbol_0.arreferenceimage"
+      "filename" : "Symbol_A.arreferenceimage"
     },
     {
-      "filename" : "Symbol_1.arreferenceimage"
+      "filename" : "Symbol_B.arreferenceimage"
     },
     {
-      "filename" : "Symbol_2.arreferenceimage"
+      "filename" : "Symbol_C.arreferenceimage"
     },
     {
-      "filename" : "Symbol_3.arreferenceimage"
+      "filename" : "Symbol_D.arreferenceimage"
+    },
+    {
+      "filename" : "Symbol_E.arreferenceimage"
+    },
+    {
+      "filename" : "Symbol_F.arreferenceimage"
     }
   ]
 }

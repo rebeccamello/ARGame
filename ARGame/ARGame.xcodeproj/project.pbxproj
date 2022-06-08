@@ -26,6 +26,7 @@
 		9DEBC8AD284AACDA0094F8C6 /* DESIGNER.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBC8AC284AACDA0094F8C6 /* DESIGNER.otf */; };
 		C0383F7A284FEECB00A96222 /* GameDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0383F79284FEECB00A96222 /* GameDataViewModel.swift */; };
 		C0383F7C2850CA3F00A96222 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0383F7B2850CA3F00A96222 /* Card.swift */; };
+		C0EC64D628512EBF000F8C40 /* TimerStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC64D528512EBF000F8C40 /* TimerStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		9DEBC8AE284AAE0F0094F8C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C0383F79284FEECB00A96222 /* GameDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataViewModel.swift; sourceTree = "<group>"; };
 		C0383F7B2850CA3F00A96222 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		C0EC64D528512EBF000F8C40 /* TimerStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +85,13 @@
 			isa = PBXGroup;
 			children = (
 				9DCA222B284EA63E003C5F6B /* ViewModel */,
-				9DEBC8AE284AAE0F0094F8C6 /* Info.plist */,
-				9DEBC8AC284AACDA0094F8C6 /* DESIGNER.otf */,
 				9D6CC6122849256B00BE4FD0 /* Classes */,
 				9D6CC60D2849237F00BE4FD0 /* Views */,
 				9D6CC5F928480B3F00BE4FD0 /* AppDelegate.swift */,
-				C0383F79284FEECB00A96222 /* GameDataViewModel.swift */,
 				9D6CC5FD28480B3F00BE4FD0 /* Experience.rcproject */,
 				9D6CC5FF28480B4100BE4FD0 /* Assets.xcassets */,
+				9DEBC8AE284AAE0F0094F8C6 /* Info.plist */,
+				9DEBC8AC284AACDA0094F8C6 /* DESIGNER.otf */,
 				9D6CC60128480B4100BE4FD0 /* Preview Content */,
 			);
 			path = ARGame;
@@ -111,8 +112,8 @@
 				9D6CC60B2849233200BE4FD0 /* MenuView.swift */,
 				9D6CC60E2849238B00BE4FD0 /* OnBoardingView.swift */,
 				9D39FBD5284FDD1B0067463E /* SetBombView.swift */,
-				9DD722CC284A830800674090 /* DefuseGameView.swift */,
 				9DD722C8284A757C00674090 /* TimerView.swift */,
+				9DD722CC284A830800674090 /* DefuseGameView.swift */,
 				9D6CC6192849343300BE4FD0 /* GameOverView.swift */,
 			);
 			path = Views;
@@ -126,6 +127,7 @@
 				9D6CC61728492E2E00BE4FD0 /* CustomButtons.swift */,
 				9DD722C628495BE100674090 /* CameraButton.swift */,
 				C0383F7B2850CA3F00A96222 /* Card.swift */,
+				C0EC64D528512EBF000F8C40 /* TimerStruct.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				9DCA222C284EA64E003C5F6B /* TimerViewModel.swift */,
+				C0383F79284FEECB00A96222 /* GameDataViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			files = (
 				9DD722CD284A830800674090 /* DefuseGameView.swift in Sources */,
 				9D39FBD6284FDD1B0067463E /* SetBombView.swift in Sources */,
+				C0EC64D628512EBF000F8C40 /* TimerStruct.swift in Sources */,
 				9D6CC61828492E2E00BE4FD0 /* CustomButtons.swift in Sources */,
 				9DCA222D284EA64E003C5F6B /* TimerViewModel.swift in Sources */,
 				9DD722C728495BE100674090 /* CameraButton.swift in Sources */,
@@ -361,9 +365,11 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
-				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,7 +379,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -393,9 +399,11 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
-				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,7 +413,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

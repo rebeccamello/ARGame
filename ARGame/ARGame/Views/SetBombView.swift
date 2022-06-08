@@ -8,24 +8,28 @@
 import SwiftUI
 
 struct SetBombView: View {
+    var gameDataViewModel: GameDataViewModel
+
     @State var showButton: Bool = false
     @State var showingTimer: Bool = false
-    var gameDataViewModel: GameDataViewModel
+    @State var selectedMinute: Int = 1
+    @State var defuse: Bool = false
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            ARViewContainer(showButton: $showButton, isPlanting: true, gameDataViewModel: gameDataViewModel)
-                .edgesIgnoringSafeArea(.all)
-            
-            ConditionalButton(showButton: $showButton, text: "PLANTAR BOMBA", backgroundColor: .accentColor, foregroundColor: Color("BackgroundColor")) {
-                showingTimer = true
+        if !defuse {
+            ZStack(alignment: .bottom) {
+                ARViewContainer(showButton: $showButton, isPlanting: true, gameDataViewModel: gameDataViewModel)
+                    .edgesIgnoringSafeArea(.all)
                 
+                ConditionalButton(showButton: $showButton, text: "PLANTAR!", backgroundColor: .accentColor, foregroundColor: Color("BackgroundColor")) {
+                    showingTimer = true
+                }
             }
-        }
-        .fullScreenCover(isPresented: $showingTimer) {
-            DefuseGameView(gameDataViewModel: gameDataViewModel)
-        } content: {
-            TimerView(gameDataViewModel: gameDataViewModel)
+            .fullScreenCover(isPresented: $showingTimer) {
+                TimerView(gameDataViewModel: gameDataViewModel, selectedMinute: $selectedMinute, showingTimer: $showingTimer, defuse: $defuse)
+            }
+        } else {
+            DefuseGameView(gameDataViewModel: gameDataViewModel, selectedMinute: $selectedMinute)
         }
     }
 }
@@ -46,8 +50,10 @@ struct ConditionalButton: View {
     }
 }
 
+#if DEBUG
 //struct SetBombView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        SetBombView()
 //    }
 //}
+#endif

@@ -14,7 +14,6 @@ struct GameOverView: View {
     @State private var goToMenu: Bool = false
     
     var body: some View {
-        
         if !goToMenu {
             ZStack {
                 Color("BackgroundColor")
@@ -67,9 +66,9 @@ struct GameOverView: View {
 }
 
 #if DEBUG
-struct GameOverView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameOverView(titleText: "Parabens!", text: "Você conseguiu desarmar a bomba antes do tempo!", time: "05:00")
-    }
-}
+//struct GameOverView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GameOverView(titleText: "Parabens!", text: "Você conseguiu desarmar a bomba antes do tempo!", time: "05:00")
+//    }
+//}
 #endif

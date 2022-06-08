@@ -6,14 +6,10 @@
 //
 
 enum Card: String {
-    case symbol0 = "Symbol_0"
-    case symbol1 = "Symbol_1"
-    case symbol2 = "Symbol_2"
-    case symbol3 = "Symbol_3"
-    case symbol4 = "Symbol_4"
-    case symbol5 = "Symbol_5"
-    case symbol6 = "Symbol_6"
-    case symbol7 = "Symbol_7"
-    case symbol8 = "Symbol_8"
-    case symbol9 = "Symbol_9"
+    case symbolA = "Symbol_A"
+    case symbolB = "Symbol_B"
+    case symbolC = "Symbol_C"
+    case symbolD = "Symbol_D"
+    case symbolE = "Symbol_E"
+    case symbolF = "Symbol_F"
 }

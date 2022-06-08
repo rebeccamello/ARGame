@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-class GameDataViewModel: ObservableObject {
+final class GameDataViewModel: ObservableObject {
     @Published var bombedCard: Card?
 }

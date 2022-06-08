@@ -33,18 +33,10 @@ struct ARViewContainer: UIViewRepresentable {
             for anchor in anchors {
                 guard let imageAnchor = anchor as? ARImageAnchor else { return }
                 
-                if parent.isPlanting {
-                    if let imageName = imageAnchor.name, let _ = Card(rawValue: imageName) {
-                        let anchorEntity = AnchorEntity(anchor: imageAnchor)
-                        if let scene = try? Experience.loadPlantingBomb() {
-                            if let bomb = scene.findEntity(named: "Bomb") {
-                                anchorEntity.addChild(bomb)
-                                parent.arView.scene.addAnchor(anchorEntity)
-                            }
-                        }
-                    }
-                } else {
-                    if let bombedCard = parent.gameDataViewModel.bombedCard, let imageName = imageAnchor.name, imageName == bombedCard.rawValue {
+                if let imageName = imageAnchor.name {
+                    let imageToTrack = parent.isPlanting ? { Card(rawValue: imageName) != nil } : { Card(rawValue: imageName) == self.parent.gameDataViewModel.bombedCard }
+                    
+                    if imageToTrack() {
                         let anchorEntity = AnchorEntity(anchor: imageAnchor)
                         if let scene = try? Experience.loadPlantingBomb() {
                             if let bomb = scene.findEntity(named: "Bomb") {
@@ -61,9 +53,12 @@ struct ARViewContainer: UIViewRepresentable {
             for anchor in anchors {
                 guard let imageAnchor = anchor as? ARImageAnchor else { return }
                 
-                if let imageName = imageAnchor.name, Card(rawValue: imageName) != nil {
-                    parent.showButton = true
-                    parent.gameDataViewModel.bombedCard = Card(rawValue: imageName)
+                if let imageName = imageAnchor.name {
+                    let imageToTrack = parent.isPlanting ? { Card(rawValue: imageName) != nil } : { Card(rawValue: imageName) == self.parent.gameDataViewModel.bombedCard }
+                    if imageToTrack() {
+                        parent.showButton = true
+                        parent.gameDataViewModel.bombedCard = Card(rawValue: imageName)
+                    }
                 }
                 
                 if !imageAnchor.isTracked {
@@ -85,7 +80,7 @@ struct ARViewContainer: UIViewRepresentable {
         }
         
         arView.session.delegate = context.coordinator
-        arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors, .stopTrackedRaycasts, .resetSceneReconstruction])
         return arView
     }
     

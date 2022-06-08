@@ -36,11 +36,11 @@ struct OnBoardingSteps: View {
 }
 
 #if DEBUG
-struct OnBoardingSteps_Previews: PreviewProvider {
-    static var previews: some View {
-        OnBoardingSteps(stepNumber: 1, title: "Título", description: "Descrição aqui.")
-            .background(Color("BackgroundColor"))
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct OnBoardingSteps_Previews: PreviewProvider {
+//    static var previews: some View {
+//        OnBoardingSteps(stepNumber: 1, title: "Título", description: "Descrição aqui.")
+//            .background(Color("BackgroundColor"))
+//            .previewLayout(.sizeThatFits)
+//    }
+//}
 #endif
