@@ -27,9 +27,9 @@ struct OnBoardingView: View {
 }
 
 #if DEBUG
-struct OnBoardingView_Previews: PreviewProvider {
-    static var previews: some View {
-        OnBoardingView(shouldShowOnBoarding: .constant(true))
-    }
-}
+//struct OnBoardingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        OnBoardingView(shouldShowOnBoarding: .constant(true))
+//    }
+//}
 #endif

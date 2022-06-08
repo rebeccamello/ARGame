@@ -55,15 +55,14 @@ struct OnBoardingStruct: View {
             }
         }
     }
-
 }
 
 #if DEBUG
-struct OnBoardingStruct_Previews: PreviewProvider {
-    static var previews: some View {
-        OnBoardingStruct(playerNumber: 1, shouldShowOnBoarding: .constant(true))
-            .background(Color("BackgroundColor"))
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct OnBoardingStruct_Previews: PreviewProvider {
+//    static var previews: some View {
+//        OnBoardingStruct(playerNumber: 1, shouldShowOnBoarding: .constant(true))
+//            .background(Color("BackgroundColor"))
+//            .previewLayout(.sizeThatFits)
+//    }
+//}
 #endif

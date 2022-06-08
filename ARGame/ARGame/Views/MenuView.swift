@@ -11,15 +11,15 @@ struct MenuView: View {
     @AppStorage("shouldShowOnBoarding") var shouldShowOnBoarding: Bool = true
     @State private var showingGame: Bool = false
     
+    var gameDataViewModel = GameDataViewModel()
+    
     var body: some View {
         if !showingGame {
             NavigationView {
                 ZStack {
                     Color("BackgroundColor")
                         .ignoresSafeArea(.all)
-                    
-                    VStack (alignment: .center) {
-                        
+                    VStack {
                         Text("defusAR")
                             .foregroundColor(Color("AccentColor"))
                             .font(.custom("DESIGNER", size: 100))
@@ -31,27 +31,28 @@ struct MenuView: View {
                             .scaledToFit()
                             .padding()
                         
-                        CustomButtons(text: "Começar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor")) {
+                        CustomButtons(text: "COMEÇAR", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor")) {
                             showingGame = true
                         }
                         .padding()
                     }
                 }
-                .preferredColorScheme(.dark)
+                .navigationBarTitleDisplayMode(.inline)
             }
+            .preferredColorScheme(.dark)
             .fullScreenCover(isPresented: $shouldShowOnBoarding) {
                 OnBoardingView(shouldShowOnBoarding: $shouldShowOnBoarding)
             }
         } else {
-            SetBombView()
+            SetBombView(gameDataViewModel: gameDataViewModel)
         }
     }
 }
 
 #if DEBUG
-struct MenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuView()
-    }
-}
+//struct MenuView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MenuView()
+//    }
+//}
 #endif

@@ -5,7 +5,22 @@
   },
   "resources" : [
     {
-      "filename" : "TIA.arreferenceimage"
+      "filename" : "Symbol_A.arreferenceimage"
+    },
+    {
+      "filename" : "Symbol_B.arreferenceimage"
+    },
+    {
+      "filename" : "Symbol_C.arreferenceimage"
+    },
+    {
+      "filename" : "Symbol_D.arreferenceimage"
+    },
+    {
+      "filename" : "Symbol_E.arreferenceimage"
+    },
+    {
+      "filename" : "Symbol_F.arreferenceimage"
     }
   ]
 }
