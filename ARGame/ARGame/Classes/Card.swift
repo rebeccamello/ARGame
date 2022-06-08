@@ -12,4 +12,7 @@ enum Card: String {
     case symbolD = "Symbol_D"
     case symbolE = "Symbol_E"
     case symbolF = "Symbol_F"
+    case symbolG = "Symbol_G"
+    case symbolH = "Symbol_H"
+    case symbolI = "Symbol_I"
 }

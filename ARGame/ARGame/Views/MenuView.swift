@@ -11,8 +11,6 @@ struct MenuView: View {
     @AppStorage("shouldShowOnBoarding") var shouldShowOnBoarding: Bool = true
     @State private var showingGame: Bool = false
     
-    var gameDataViewModel = GameDataViewModel()
-    
     var body: some View {
         if !showingGame {
             NavigationView {
@@ -44,7 +42,7 @@ struct MenuView: View {
                 OnBoardingView(shouldShowOnBoarding: $shouldShowOnBoarding)
             }
         } else {
-            SetBombView(gameDataViewModel: gameDataViewModel)
+            SetBombView(gameDataViewModel: GameDataViewModel())
         }
     }
 }

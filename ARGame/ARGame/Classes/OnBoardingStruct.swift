@@ -16,7 +16,7 @@ struct OnBoardingStruct: View {
         if (playerNumber == 1) {
             VStack {
                 VStack(alignment: .leading) {
-                    Image("bomba2")
+                    Image("Bomba2")
                         .resizable()
                         .frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.35)
                         .scaledToFit()

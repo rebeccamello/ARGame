@@ -30,7 +30,7 @@ struct DefuseGameView: View {
                 }
             }
         } else {
-            GameOverView(titleText: "DEU BOM", text: "BOA KRL", time: "")
+            GameOverView(titleText: "DEU BOM", text: "BOA KRL", imageName: "Bomba1", time: "")
         }
     }
 }
