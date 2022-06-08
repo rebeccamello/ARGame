@@ -72,11 +72,3 @@ struct TimerView: View {
         .preferredColorScheme(.dark)
     }
 }
-
-#if DEBUG
-//struct TimerBiew_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TimerView()
-//    }
-//}
-#endif

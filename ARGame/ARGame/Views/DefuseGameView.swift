@@ -30,15 +30,7 @@ struct DefuseGameView: View {
                 }
             }
         } else {
-            GameOverView(titleText: "DEU BOM", text: "BOA KRL", imageName: "Bomba1", time: "")
+            GameOverView(titleText: "PARABÉNS!", text: "Você conseguiu desarmar a  bomba antes do tempo!", imageName: "bomba1", time: "")
         }
     }
 }
-
-#if DEBUG
-//struct ARViewContainer_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DefuseGameView()
-//    }
-//}
-#endif

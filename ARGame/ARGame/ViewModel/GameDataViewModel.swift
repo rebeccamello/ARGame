@@ -9,6 +9,4 @@ import SwiftUI
 
 final class GameDataViewModel: ObservableObject {
     @Published var bombedCard: Card?
-    
-    
 }

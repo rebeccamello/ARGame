@@ -18,7 +18,7 @@ struct ARViewContainer: UIViewRepresentable {
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self, showButton: $showButton)
-    }
+    } 
     
     class Coordinator: NSObject, ARSessionDelegate {
         @Binding var showButton: Bool

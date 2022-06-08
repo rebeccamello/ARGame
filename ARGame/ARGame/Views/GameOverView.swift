@@ -19,7 +19,7 @@ struct GameOverView: View {
         if !goToMenu && !playAgain {
             ZStack {
                 Color("BackgroundColor")
-                    .ignoresSafeArea()
+                    .ignoresSafeArea(.all)
                 
                 VStack {
                     Text(titleText)
