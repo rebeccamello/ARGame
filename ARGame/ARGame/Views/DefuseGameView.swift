@@ -42,7 +42,7 @@ struct TimerStruct: View {
             }
             .onReceive(viewModel.timer, perform: viewModel.update)
         } else {
-            GameOverView(titleText: "Que pena!", text: "Você não conseguiu desarmar a  bomba antes do tempo!", time: "00:00")
+            GameOverView(titleText: "Que pena!", text: "Você não conseguiu desarmar a  bomba antes do tempo!", imageName: "explodedBomb", time: "00:00")
         }
         
     }
