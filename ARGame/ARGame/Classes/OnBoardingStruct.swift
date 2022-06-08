@@ -47,8 +47,6 @@ struct OnBoardingStruct: View {
                     
                     OnBoardingSteps(stepNumber: 1, title: "Encontre o objeto", description: "Ande pelo ambiente que está inserido o objeto e o encontre")
                     
-                    OnBoardingSteps(stepNumber: 2, title: "Desative a bomba", description: "Faça TAL CoISA para desativar a bomba antes que o tempo acabe e ela exploda")
-                    
                     CustomButtons(text: "Continuar", backgroundColor: Color("AccentColor"), foregroundColor: Color("BackgroundColor"), action: {
                         shouldShowOnBoarding.toggle()
                     })
