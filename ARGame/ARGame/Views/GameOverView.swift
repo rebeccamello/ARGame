@@ -40,7 +40,7 @@ struct GameOverView: View {
                     
                     Image("bomba1")
                         .resizable()
-                        .frame(width: 200, height: 200)
+                        .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.35)
                         .scaledToFit()
                         .padding()
                     

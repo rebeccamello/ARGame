@@ -14,20 +14,25 @@ enum ImageNames: String {
 
 struct DefuseGameView: View {
     @State var showButton: Bool = false
+    @Binding var selectedMinute: Int
     
     var body: some View {
         ZStack (alignment: .bottom){
             ARViewContainer(showButton: $showButton, isPlanting: false)
                 .edgesIgnoringSafeArea(.all)
             
-            TimerStruct()
+            TimerStruct(viewModel: TimerStruct.ViewModel(min: selectedMinute))
         }
     }
 }
 
 struct TimerStruct: View {
-    @StateObject private var vm = ViewModel()
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @ObservedObject private var vm: ViewModel
+    
+    init(viewModel: ViewModel) {
+        self.vm = viewModel
+    }
     
     var body: some View {
         if !vm.showingAlert {
@@ -50,10 +55,10 @@ struct TimerStruct: View {
     }
 }
 
-#if DEBUG
-struct ARViewContainer_Previews: PreviewProvider {
-    static var previews: some View {
-        DefuseGameView()
-    }
-}
-#endif
+//#if DEBUG
+//struct ARViewContainer_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DefuseGameView()
+//    }
+//}
+//#endif

@@ -63,7 +63,7 @@ struct TimerView: View {
                     .padding()
                 }
             } else {
-                DefuseGameView()
+                DefuseGameView(selectedMinute: $selectedMinute)
             }
         }
         .preferredColorScheme(.dark)
