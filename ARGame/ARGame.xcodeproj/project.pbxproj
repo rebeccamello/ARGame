@@ -357,10 +357,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ARGame/Preview Content\"";
-				DEVELOPMENT_TEAM = 337G99FP8D;
+				DEVELOPMENT_TEAM = R36LU3NVAA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARGame/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = defusAR;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -391,10 +392,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ARGame/Preview Content\"";
-				DEVELOPMENT_TEAM = 337G99FP8D;
+				DEVELOPMENT_TEAM = R36LU3NVAA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARGame/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = defusAR;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

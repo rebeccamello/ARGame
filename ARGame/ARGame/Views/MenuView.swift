@@ -42,7 +42,11 @@ struct MenuView: View {
                 OnBoardingView(shouldShowOnBoarding: $shouldShowOnBoarding)
             }
         } else {
-            SetBombView(gameDataViewModel: GameDataViewModel())
+            NavigationView {
+                SetBombView(gameDataViewModel: GameDataViewModel())
+                    .navigationBarHidden(true)
+                
+            }
         }
     }
 }

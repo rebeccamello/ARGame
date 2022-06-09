@@ -14,31 +14,30 @@ struct DefuseGameView: View {
     @Binding var selectedMinute: Int
     
     var body: some View {
-        if !gameOver {
-            ZStack {
-                ARViewContainer(showButton: $showButton, isPlanting: false, gameDataViewModel: gameDataViewModel)
-                    .edgesIgnoringSafeArea(.all)
+        ZStack {
+            ARViewContainer(showButton: $showButton, isPlanting: false, gameDataViewModel: gameDataViewModel)
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                TimerStruct(initialTime: TimeInterval(selectedMinute * 60))
                 
-                VStack {
-                    TimerStruct(initialTime: TimeInterval(selectedMinute * 60))
-                    
-                    Spacer()
-                    
-                    ConditionalButton(showButton: $showButton, text: "DESARMAR!", backgroundColor: .accentColor, foregroundColor: Color("BackgroundColor")) {
-                        gameOver = true
-                    }
+                Spacer()
+                
+                ConditionalButton(showButton: $showButton, text: "DESARMAR!", backgroundColor: .accentColor, foregroundColor: Color("BackgroundColor")) {
+                    gameOver = true
                 }
             }
-        } else {
-            GameOverView(titleText: "DEU BOM", text: "BOA KRL", imageName: "Bomba1", time: "")
-        }
+        }.background(
+            NavigationLink(isActive: $gameOver, destination: {
+                GameOverView(titleText: "PARABÉNS!", text: "Você conseguiu desarmar a  bomba antes do tempo!", imageName: "bomba1", time: "")
+            }, label: {
+                EmptyView()
+            })
+        )
+
+//        if !gameOver {
+//                    } else {
+//            GameOverView(titleText: "PARABÉNS!", text: "Você conseguiu desarmar a  bomba antes do tempo!", imageName: "bomba1", time: "")
+//        }
     }
 }
-
-#if DEBUG
-//struct ARViewContainer_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DefuseGameView()
-//    }
-//}
-#endif

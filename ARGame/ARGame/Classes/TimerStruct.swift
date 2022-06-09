@@ -15,15 +15,18 @@ struct TimerStruct: View {
     }
     
     var body: some View {
-        if !viewModel.timeEnded {
-            VStack {
-                Text("\(viewModel.formatedTime)")
-                    .font(.system(size: 30, weight: .bold, design: .monospaced))
-                    .padding()
-            }
-            .onReceive(viewModel.timer, perform: viewModel.update)
-        } else {
-            GameOverView(titleText: "Que pena!", text: "Você não conseguiu desarmar a  bomba antes do tempo!", imageName: "ExplodedBomb", time: "00:00")
+        VStack {
+            Text("\(viewModel.formatedTime)")
+                .font(.system(size: 30, weight: .bold, design: .monospaced))
+                .padding()
         }
+        .onReceive(viewModel.timer, perform: viewModel.update)
+        .background(
+            NavigationLink(isActive: $viewModel.timeEnded, destination: {
+                GameOverView(titleText: "Que pena!", text: "Você não conseguiu desarmar a  bomba antes do tempo!", imageName: "explodedBomb", time: "00:00")
+            }, label: {
+                EmptyView()
+            })
+        )
     }
 }
