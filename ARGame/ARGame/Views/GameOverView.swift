@@ -58,7 +58,10 @@ struct GameOverView: View {
                     .padding()
                     .shadow(color: Color("AccentColor"), radius: 8)
                 }
+                
+//                .foregroundColor(.black)
             }
+            .navigationBarHidden(true)
             .preferredColorScheme(.dark)
         }
         
